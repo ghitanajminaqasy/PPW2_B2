@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Controllers\PostController;
+
 
 class Post extends Model
 {
@@ -14,4 +16,6 @@ class Post extends Model
      *
      * @var array
      */
+    protected $guarded = [''];
+
 }

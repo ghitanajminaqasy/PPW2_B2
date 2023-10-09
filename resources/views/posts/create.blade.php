@@ -14,7 +14,7 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
                         
                             @csrf
 
@@ -22,7 +22,7 @@
                                 <label class="font-weight-bold">GAMBAR</label>
                                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                             
-                                <!-- error message untuk title -->
+                            
                                 @error('image')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
@@ -46,7 +46,7 @@
                                 <label class="font-weight-bold">KONTEN</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
                             
-                                <!-- error message untuk content -->
+                                <!--  error message untuk content -->
                                 @error('content')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
